@@ -1,0 +1,148 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #000000; /* Light Gray background */
+  color: #000000; /* Black for primary text */
+}
+header {
+  width: 100%;
+  background-color: #19A7CE; /* Cyan header */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  height: 60px; /* Adjust as needed */
+  width: auto;
+}
+.logo-text {
+  color: #F6F1F1; /* Light Gray text for logo */
+  font-size: 20px;
+  font-weight: bold;
+}
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #F6F1F1; /* Light Gray text in navbar */
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #146C94; /* Dark Cyan hover effect */
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Profile Picture with Floating Animation */
+.profile-picture {
+  width: 250px;
+  height: 350px;
+  border: 5px solid #19A7CE; /* Cyan border */
+  box-shadow: 0 0 40px 20px rgba(25, 167, 206, 0.4); /* Cyan glow */
+  margin-top: 50px;
+  overflow: hidden;
+  animation: float 3s ease-in-out infinite; /* Floating animation */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Floating Animation Keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Slogan Text */
+.text {
+  display: flex;
+  gap: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff; /* Black text */
+  padding-bottom: 20px;
+  margin-top: auto;
+}
+.text .create {
+  color: #146C94; /* Dark Cyan for "CREATE" */
+  animation: fadeColor 3s infinite;
+}
+@keyframes fadeColor {
+  0%, 100% {
+    color: #ffffff; /* Black */
+  }
+  50% {
+    color: #00aeff; /* Dark Cyan */
+  }
+}
+
+/* Footer */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #19A7CE; /* Cyan footer */
+  padding: 10px 20px;
+  color: #F6F1F1; /* Light Gray text */
+  font-size: 14px;
+  position: sticky;
+  bottom: 0;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Make the icon circular */
+  color: #F6F1F1; /* Light Gray icon color */
+  font-size: 20px;
+  background-color: #19A7CE; /* Cyan background */
+  transition: transform 0.3s, background-color 0.3s;
+}
+.social-icon:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  background-color: #146C94; /* Dark Cyan hover effect */
+}
